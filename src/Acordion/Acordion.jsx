@@ -2,7 +2,7 @@ import React from 'react';
 
 function Acordion() {
     return (
-        <div>Acordion</div>
+        <h1>Acordion</h1>
     );
 }
 
