@@ -1,0 +1,29 @@
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    gap: 12px;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 12px 24px;
+    width: 100%;
+    max-width: 300px;
+    background-color: var(--acordion-item);
+    transition: all .3s ease;
+}
+
+.title {
+    gap: 12px;
+    cursor: pointer;
+}
+
+.answer {
+    border: 1px solid var(--acordion-item-answer);
+    padding: 6px 12px;
+    border-radius: 4px;
+    background-color: var(--acordion-item-answer);
+}

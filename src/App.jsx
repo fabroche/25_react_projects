@@ -2,6 +2,7 @@ import './App.css'
 import {Link, Route, Routes} from "react-router-dom";
 import {Acordion} from "./Acordion/Acordion.jsx";
 import Home from "./Home/Home.jsx";
+import RandomHex from "./RandomHex/RandomHex.jsx";
 
 function App() {
 
@@ -9,18 +10,22 @@ function App() {
         <>
             <div className="App">
                 <nav>
-                    <ul>
-                        <li>
+                    <ul className="navbar">
+                        <li className="navbar-item">
                             <Link to="/">Home</Link>
                         </li>
-                        <li>
+                        <li className="navbar-item">
                             <Link to="/acordion">Acordion</Link>
+                        </li>
+                        <li className="navbar-item">
+                            <Link to="/randomhex">RandomHex</Link>
                         </li>
                     </ul>
                 </nav>
                 <Routes>
                     <Route path="/" element={<Home/>}></Route>
                     <Route path="/acordion" element={<Acordion/>}></Route>
+                    <Route path="/randomhex" element={<RandomHex/>}></Route>
                 </Routes>
             </div>
         </>

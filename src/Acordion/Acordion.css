@@ -1,0 +1,30 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+    width: 100vw;
+}
+
+.btn {
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: var(--btn-primary);
+    font-weight: bold;
+    transition: background-color .3s ease;
+}
+
+.btn:hover {
+    background-color: var(--btn-primary-hover);
+}
+
+.btn-active {
+    background-color: var(--btn-active);
+}
+
+.btn-active:hover {
+    background-color: var(--btn-active-hover);
+}
