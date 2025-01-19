@@ -26,6 +26,7 @@ function App() {
                     <Route path="/" element={<Home/>}></Route>
                     <Route path="/acordion" element={<Acordion/>}></Route>
                     <Route path="/randomhex" element={<RandomHex/>}></Route>
+                    <Route path="*" element={<Home/>}></Route>
                 </Routes>
             </div>
         </>
