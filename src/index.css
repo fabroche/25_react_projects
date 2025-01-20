@@ -1,10 +1,10 @@
 :root {
     --btn-primary: cornflowerblue;
-    --btn-primary-hover: rgba(100, 149, 237, 0.7);
+    --btn-primary-hover: rgb(47, 101, 197);
     --btn-active: mediumseagreen;
     --btn-active-hover: rgba(60, 179, 113, 0.53);
-    --acordion-item: #efb46c;
-    --acordion-item-answer: #efbd80;
+    --acordion-item: aliceblue;
+    --acordion-item-answer: white;
 }
 
 * {

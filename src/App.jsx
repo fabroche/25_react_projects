@@ -12,20 +12,20 @@ function App() {
                 <nav>
                     <ul className="navbar">
                         <li className="navbar-item">
-                            <Link to="/">Home</Link>
+                            <Link to="/25_react_projects">Home</Link>
                         </li>
                         <li className="navbar-item">
-                            <Link to="/acordion">Acordion</Link>
+                            <Link to="/25_react_projects/acordion">Acordion</Link>
                         </li>
                         <li className="navbar-item">
-                            <Link to="/random-color">RandomColor</Link>
+                            <Link to="/25_react_projects/random-color">RandomColor</Link>
                         </li>
                     </ul>
                 </nav>
                 <Routes>
-                    <Route path="/" element={<Home/>}></Route>
-                    <Route path="/acordion" element={<Acordion/>}></Route>
-                    <Route path="/random-color" element={<RandomColor/>}></Route>
+                    <Route path="/25_react_projects" element={<Home/>}></Route>
+                    <Route path="/25_react_projects/acordion" element={<Acordion/>}></Route>
+                    <Route path="/25_react_projects/random-color" element={<RandomColor/>}></Route>
                     <Route path="*" element={<Home/>}></Route>
                 </Routes>
             </div>

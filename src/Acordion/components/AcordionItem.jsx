@@ -24,7 +24,7 @@ function AcordionItem({
         setMultiSelectedAcordionItems([...multiSelectedAcordionItems, getCurrentId]);
     }
 
-    const answer = (<div className="answer">{data.answer}</div>)
+    const answer = (<em className="answer">{data.answer}</em>)
 
     return (
         <div className="item flex-center">
@@ -35,7 +35,15 @@ function AcordionItem({
                     : handleSingleSelection(data.id)}
             >
                 <h3>{data.question}</h3>
-                <button className="btn">+</button>
+                <button className="btn">{
+                    isEnableMultiSelection
+                        ? multiSelectedAcordionItems.includes(data.id)
+                            ? '-'
+                            : '+'
+                        : selected === data.id
+                            ? '-'
+                            : '+'
+                }</button>
             </div>
             {
                 isEnableMultiSelection

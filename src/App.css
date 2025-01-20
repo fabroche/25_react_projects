@@ -7,21 +7,41 @@
 }
 
 .navbar {
+    width: 100%;
+    background-color: var(--btn-primary);
+    padding: 8px 16px;
+    border-radius: 4px;
     list-style: none;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    gap: 6px;
 }
 
 .navbar-item {
     padding: 12px 24px;
-    border: 1px solid black;
     width: 100%;
-    background-color: var(--btn-primary);
     color: black;
     flex-grow: 1;
+    height: 100%;
+    border-radius: 6px;
+    transition: background-color 0.3s ease-in;
+}
+
+.navbar-item:hover {
+    background-color: #4545cc;
 }
 
 .navbar-item a {
     text-decoration: none;
+    color: aliceblue;
+    font-weight: bold;
+
+
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
 }

@@ -57,16 +57,19 @@ function RandomColor() {
 
                 >
                     <button
+                        className="btn"
                         onClick={() => setColorType(colorTypeMap.hex)}
                     >
                         Create Hex Color
                     </button>
                     <button
+                        className="btn"
                         onClick={() => setColorType(colorTypeMap.rgb)}
                     >
                         Create Rgb Color
                     </button>
                     <button
+                        className="btn randomColor-btn--primary"
                         onClick={
                             colorType === colorTypeMap.hex
                                 ? generateHexRandomColor

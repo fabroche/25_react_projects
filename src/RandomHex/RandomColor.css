@@ -2,9 +2,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 3.2rem;
     flex-direction: column;
-    width: 100vw;
-    height: 100vh;
+    width: 50%;
+    height: 100%;
 }
 
 .randomColor-actions-container {
@@ -15,16 +16,36 @@
 }
 
 .randomColor-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
+    min-height: 400px;
     width: 100%;
+    padding: 16px;
+    border-radius: 50px;
 }
 
 .randomColor-content__title {
     text-align: center;
     align-content: center;
     color: aliceblue;
-    font-size: 5.2rem;
+    font-size: 3.2rem;
     font-weight: bold;
     height: 100%;
     width: 100%;
+}
+
+.randomColor-btn--primary {
+    background-color: darkorange;
+}
+
+.randomColor-btn--primary:hover {
+    background-color: #f6ab50;
+}
+
+@media only screen and (max-width: 600px) {
+    .randomColor-container {
+        width: 100%;
+    }
 }
