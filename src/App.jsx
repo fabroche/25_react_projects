@@ -3,6 +3,7 @@ import {Link, Route, Routes} from "react-router-dom";
 import {Acordion} from "./Acordion/Acordion.jsx";
 import Home from "./Home/Home.jsx";
 import RandomColor from "./RandomHex/RandomColor.jsx";
+import StarRating from "./StarRating/StarRating.jsx";
 
 function App() {
 
@@ -20,12 +21,16 @@ function App() {
                         <li className="navbar-item">
                             <Link to="/25_react_projects/random-color">RandomColor</Link>
                         </li>
+                        <li className="navbar-item">
+                            <Link to="/25_react_projects/star-rating">StarRating</Link>
+                        </li>
                     </ul>
                 </nav>
                 <Routes>
                     <Route path="/25_react_projects" element={<Home/>}></Route>
                     <Route path="/25_react_projects/acordion" element={<Acordion/>}></Route>
                     <Route path="/25_react_projects/random-color" element={<RandomColor/>}></Route>
+                    <Route path="/25_react_projects/star-rating" element={<StarRating/>}></Route>
                     <Route path="*" element={<Home/>}></Route>
                 </Routes>
             </div>
