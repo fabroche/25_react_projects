@@ -23,10 +23,18 @@
     background-color: var(--btn-primary-hover);
 }
 
-.btn-active {
+.btn-on {
     background-color: var(--btn-active);
 }
 
-.btn-active:hover {
+.btn-on:hover {
     background-color: var(--btn-active-hover);
+}
+
+.btn-off {
+    background-color: var(--btn-off);
+}
+
+.btn-off:hover {
+    background-color: var(--btn-off-hover);
 }

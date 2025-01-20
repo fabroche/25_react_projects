@@ -3,6 +3,8 @@
     --btn-primary-hover: rgb(47, 101, 197);
     --btn-active: mediumseagreen;
     --btn-active-hover: rgba(60, 179, 113, 0.53);
+    --btn-off: #961919;
+    --btn-off-hover: #881e1e;
     --acordion-item: aliceblue;
     --acordion-item-answer: white;
 }
