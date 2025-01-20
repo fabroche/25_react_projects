@@ -2,7 +2,7 @@ import './App.css'
 import {Link, Route, Routes} from "react-router-dom";
 import {Acordion} from "./Acordion/Acordion.jsx";
 import Home from "./Home/Home.jsx";
-import RandomHex from "./RandomHex/RandomHex.jsx";
+import RandomColor from "./RandomHex/RandomColor.jsx";
 
 function App() {
 
@@ -18,14 +18,14 @@ function App() {
                             <Link to="/acordion">Acordion</Link>
                         </li>
                         <li className="navbar-item">
-                            <Link to="/randomhex">RandomHex</Link>
+                            <Link to="/random-color">RandomColor</Link>
                         </li>
                     </ul>
                 </nav>
                 <Routes>
                     <Route path="/" element={<Home/>}></Route>
                     <Route path="/acordion" element={<Acordion/>}></Route>
-                    <Route path="/randomhex" element={<RandomHex/>}></Route>
+                    <Route path="/random-color" element={<RandomColor/>}></Route>
                     <Route path="*" element={<Home/>}></Route>
                 </Routes>
             </div>

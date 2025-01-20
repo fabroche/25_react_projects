@@ -1,0 +1,30 @@
+.randomColor-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.randomColor-actions-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.randomColor-content {
+    height: 100%;
+    width: 100%;
+}
+
+.randomColor-content__title {
+    text-align: center;
+    align-content: center;
+    color: aliceblue;
+    font-size: 5.2rem;
+    font-weight: bold;
+    height: 100%;
+    width: 100%;
+}

@@ -1,4 +1,3 @@
-import React, {useState} from 'react';
 import './AcordionItem.css';
 
 function AcordionItem({
@@ -25,6 +24,8 @@ function AcordionItem({
         setMultiSelectedAcordionItems([...multiSelectedAcordionItems, getCurrentId]);
     }
 
+    const answer = (<div className="answer">{data.answer}</div>)
+
     return (
         <div className="item flex-center">
             <div
@@ -37,10 +38,15 @@ function AcordionItem({
                 <button className="btn">+</button>
             </div>
             {
-                selected === data.id || isEnableMultiSelection && multiSelectedAcordionItems.includes(data.id)
-                    ? (<div className="answer">{data.answer}</div>)
-                    : null
+                isEnableMultiSelection
+                    ? multiSelectedAcordionItems.includes(data.id)
+                        ? answer
+                        : null
+                    : selected === data.id
+                        ? answer
+                        : null
             }
+
         </div>
     );
 }
