@@ -5,6 +5,7 @@ import SliderImg from "./components/SliderImg/SliderImg.jsx";
 import {BsArrowLeftCircleFill, BsArrowRightCircleFill} from 'react-icons/bs'
 import {useEffect, useState} from "react";
 
+
 function ImageSlider() {
     const {images, error, loading} = useImages();
     const [currentSlide, setCurrentSlide] = useState(0)
@@ -12,7 +13,7 @@ function ImageSlider() {
 
     useEffect(() => {
         const autoRotateSlideInterval = setInterval(() => {
-          handleNextSliderImage()
+            handleNextSliderImage()
         }, 3500);
 
 
@@ -25,6 +26,7 @@ function ImageSlider() {
     if (error) return <p>{error}</p>
 
     function handlePreviousSliderImage() {
+
         setCurrentSlide(
             currentSlide === 0
                 ? images.length - 1
@@ -33,6 +35,7 @@ function ImageSlider() {
     }
 
     function handleNextSliderImage() {
+
         setCurrentSlide(
             currentSlide === images.length - 1
                 ? 0
@@ -50,18 +53,26 @@ function ImageSlider() {
             <h1>Image Slider</h1>
 
             <div className="slider-container">
-                {
-                    <SliderImg
-                        id={currentSlideImage.id}
-                        url={currentSlideImage.download_url}
-                    />
-                }
 
+                <div className="slider__image-container">
+                    {
+                        images.map(image => (
+                            <SliderImg
+                                style={{
+                                    translate: `${-100 * currentSlide}%`
+                                }}
+                                key={image.id}
+                                id={image.id}
+                                url={image.download_url}
+                            />))
+                    }
+                </div>
+
+                <BsArrowLeftCircleFill
+                    className="slider-control slider-control-left"
+                    onClick={handlePreviousSliderImage}
+                />
                 <div className="slider-controls-container">
-                    <BsArrowLeftCircleFill
-                        className="slider-control slider-control-left"
-                        onClick={handlePreviousSliderImage}
-                    />
                     <span className="slider-indicators-container">
                     {images.map((_, index) => (
                         <button
@@ -76,11 +87,11 @@ function ImageSlider() {
                         </button>
                     ))}
                 </span>
-                    <BsArrowRightCircleFill
-                        className="slider-control slider-control-right"
-                        onClick={handleNextSliderImage}
-                    />
                 </div>
+                <BsArrowRightCircleFill
+                    className="slider-control slider-control-right"
+                    onClick={handleNextSliderImage}
+                />
             </div>
         </>
     );

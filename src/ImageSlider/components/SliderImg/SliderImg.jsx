@@ -1,7 +1,7 @@
 import './SliderImg.css'
 import {useEffect, useRef, useState} from "react";
 
-function SliderImg({id, url}) {
+function SliderImg({id, url, style}) {
 
     const imageRef = useRef(null);
 
@@ -11,11 +11,9 @@ function SliderImg({id, url}) {
 
     function handleOnLoadImage() {
         setIsImageLoading(false);
-        console.log('Loaded')
     }
 
     useEffect(() => {
-
         function imageObserverCallback(entries, observer) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -31,6 +29,7 @@ function SliderImg({id, url}) {
             imageObserver.observe(imageRef.current);
         }
 
+
         return () => {
             if (imageRef.current) {
                 imageObserver.unobserve(imageRef.current);
@@ -40,7 +39,10 @@ function SliderImg({id, url}) {
 
     return (
         <img
-            className={`slider-img ${isImageLoading ? 'slider-img--blur' : ''}`}
+            className={
+                `slider-img ${isImageLoading ? 'slider-img--blur' : ''}`
+            }
+            style={style}
             id={id}
             src={isIntersecting ? url : ''}
             ref={imageRef}

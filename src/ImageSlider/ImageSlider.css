@@ -9,16 +9,22 @@
     align-items: center;
 }
 
-.slider-container img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    border-radius: 0.5rem;
+.slider__image-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
     box-shadow: 0 0 7px #666;
+    border-radius: 0.5rem;
+}
+
+.slider-container img {
+    z-index: -1;
+    /*border-radius: 0.5rem;*/
     user-select: none;
+    flex-grow: 0;
+    flex-shrink: 0;
+    transition: all .4s ease-in-out;
 }
 
 .slider-controls-container {
@@ -31,26 +37,36 @@
 }
 
 .slider-control {
+    all: unset;
+    position: absolute;
     z-index: 10;
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     cursor: pointer;
     color: aliceblue;
+    fill: darkorange;
+    stroke: aliceblue;
     filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.2));
     transition: all .3s ease-in-out;
 }
 
-.slider-control:hover {
+.slider-control:hover > *,
+.slider-control:focus-visible > * {
+    animation: squish .2s ease-in-out;
+}
+
+.slider-control:hover,
+.slider-control:focus-visible {
     scale: 1.1;
     color: var(--btn-primary);
 }
 
 .slider-control-left {
-
+    left: 1.6rem;
 }
 
 .slider-control-right {
-
+    right: 1.6rem;
 }
 
 .slider-indicators-container {
@@ -60,22 +76,43 @@
 }
 
 .slider-indicator {
-    height: 16px;
-    width: 16px;
+    height: 8px;
+    width: 8px;
     border-radius: 50%;
     border: none;
     outline: none;
     cursor: pointer;
-    background-color: darkgray;
+    background-color: aliceblue;
     transition: all .2s ease-in-out;
 }
 
-.slider-indicator:hover {
-    background-color: var(--btn-primary);
+.slider-indicator:hover,
+.slider-indicator:focus-visible {
+    background-color: darkorange;
 
 }
 
 .slider-indicator--active {
-    scale: 1.4;
-    background-color: var(--btn-primary);
+    scale: 1.6;
+    background-color: darkorange;
+}
+
+.slider-img--onScreen {
+    transform: translateX(0);
+}
+
+.slider-img--offScreen-left {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.slider-img--offScreen-right {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+@keyframes squish {
+    50% {
+        scale: 1.4 1;
+    }
 }
