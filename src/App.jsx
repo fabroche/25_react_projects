@@ -4,6 +4,7 @@ import {Acordion} from "./Acordion/Acordion.jsx";
 import Home from "./Home/Home.jsx";
 import RandomColor from "./RandomHex/RandomColor.jsx";
 import StarRating from "./StarRating/StarRating.jsx";
+import ImageSlider from "./ImageSlider/ImageSlider.jsx";
 
 function App() {
 
@@ -24,6 +25,9 @@ function App() {
                         <li className="navbar-item">
                             <Link to="/25_react_projects/star-rating">StarRating</Link>
                         </li>
+                        <li className="navbar-item">
+                            <Link to="/25_react_projects/image-slider">ImageSlider</Link>
+                        </li>
                     </ul>
                 </nav>
                 <Routes>
@@ -31,6 +35,7 @@ function App() {
                     <Route path="/25_react_projects/acordion" element={<Acordion/>}></Route>
                     <Route path="/25_react_projects/random-color" element={<RandomColor/>}></Route>
                     <Route path="/25_react_projects/star-rating" element={<StarRating/>}></Route>
+                    <Route path="/25_react_projects/image-slider" element={<ImageSlider/>}></Route>
                     <Route path="*" element={<Home/>}></Route>
                 </Routes>
             </div>
