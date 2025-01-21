@@ -8,15 +8,16 @@ import {useEffect, useState} from "react";
 function ImageSlider() {
     const {images, error, loading} = useImages();
     const [currentSlide, setCurrentSlide] = useState(0)
+    const currentSlideImage = images[currentSlide];
 
     useEffect(() => {
         const autoRotateSlideInterval = setInterval(() => {
-            handleNextSliderImage()
+          handleNextSliderImage()
         }, 3500);
 
 
         return () => clearInterval(autoRotateSlideInterval);
-    }, [currentSlide])
+    }, [currentSlideImage])
 
 
     if (loading) return <SliderImgLoading/>;
@@ -51,8 +52,8 @@ function ImageSlider() {
             <div className="slider-container">
                 {
                     <SliderImg
-                        id={images[currentSlide].id}
-                        url={images[currentSlide].download_url}
+                        id={currentSlideImage.id}
+                        url={currentSlideImage.download_url}
                     />
                 }
 
