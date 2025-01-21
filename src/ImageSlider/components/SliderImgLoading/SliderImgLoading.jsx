@@ -1,14 +1,18 @@
 import React from 'react';
 
-function SliderImgLoading({loadingPreviewQuantity = 5}) {
+function SliderImgLoading({loadingPreviewQuantity = 1}) {
     return (
-        [...Array(loadingPreviewQuantity)].map((_, i) => (
-            <img
-                className="slider-img--loading"
-                key={i}
-                src=''
-                alt="Image Slider Loading Skeleton" />
-        ))
+        <>
+            <h1 className="loading-title">Image Slider</h1>
+            {
+                [...Array(loadingPreviewQuantity)].map((_, i) => (
+                    <div
+                        className="slider-img--loading"
+                        key={i}
+                    ></div>
+                ))
+            }
+        </>
     );
 }
 
