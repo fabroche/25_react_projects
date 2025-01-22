@@ -5,6 +5,7 @@ import Home from "./Home/Home.jsx";
 import RandomColor from "./RandomHex/RandomColor.jsx";
 import StarRating from "./StarRating/StarRating.jsx";
 import ImageSlider from "./ImageSlider/ImageSlider.jsx";
+import LoadMoreButton from "./LoadMoreButton/LoadMoreButton.jsx";
 
 function App() {
 
@@ -28,6 +29,9 @@ function App() {
                         <li className="navbar-item">
                             <Link to="/25_react_projects/image-slider">ImageSlider</Link>
                         </li>
+                        <li className="navbar-item">
+                            <Link to="/25_react_projects/loadmore-btn">LoadMoreButton</Link>
+                        </li>
                     </ul>
                 </nav>
                 <Routes>
@@ -36,6 +40,7 @@ function App() {
                     <Route path="/25_react_projects/random-color" element={<RandomColor/>}></Route>
                     <Route path="/25_react_projects/star-rating" element={<StarRating/>}></Route>
                     <Route path="/25_react_projects/image-slider" element={<ImageSlider/>}></Route>
+                    <Route path="/25_react_projects/loadmore-btn" element={<LoadMoreButton/>}></Route>
                     <Route path="*" element={<Home/>}></Route>
                 </Routes>
             </div>
