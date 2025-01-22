@@ -35,12 +35,12 @@ function App() {
                     </ul>
                 </nav>
                 <Routes>
-                    <Route path="/25_react_projects" element={<Home/>}></Route>
-                    <Route path="/25_react_projects/acordion" element={<Acordion/>}></Route>
-                    <Route path="/25_react_projects/random-color" element={<RandomColor/>}></Route>
-                    <Route path="/25_react_projects/star-rating" element={<StarRating/>}></Route>
-                    <Route path="/25_react_projects/image-slider" element={<ImageSlider/>}></Route>
-                    <Route path="/25_react_projects/loadmore-btn" element={<LoadMoreButton/>}></Route>
+                    <Route path="/" element={<Home/>}></Route>
+                    <Route path="/acordion" element={<Acordion/>}></Route>
+                    <Route path="/random-color" element={<RandomColor/>}></Route>
+                    <Route path="/star-rating" element={<StarRating/>}></Route>
+                    <Route path="/image-slider" element={<ImageSlider/>}></Route>
+                    <Route path="/loadmore-btn" element={<LoadMoreButton/>}></Route>
                     <Route path="*" element={<Home/>}></Route>
                 </Routes>
             </div>
