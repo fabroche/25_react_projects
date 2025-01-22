@@ -33,7 +33,11 @@
     min-height: 0.5rem;
     padding: 0.8rem 1.6rem;
     user-select: none;
-    /*filter: drop-shadow(0 0 7px #666);*/
+    transition: all .2s ease-in-out;
+}
+
+.ProductCard__image--loading {
+    filter: blur(12px);
 }
 
 .ProductCard__title {
