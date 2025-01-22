@@ -8,8 +8,9 @@
 
 .navbar {
     width: 100%;
+    height: 100%;
     background-color: var(--btn-primary);
-    padding: 8px 16px;
+    padding: 1.6rem 2.4rem;
     border-radius: 4px;
     list-style: none;
     display: flex;
@@ -18,29 +19,36 @@
     gap: 6px;
 }
 
-.navbar-item {
-    padding: 12px 24px;
+.navbar-item-container {
     width: 100%;
-    color: black;
-    flex-grow: 1;
+    height: 30px;
+}
+
+.navbar-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.6rem 2.4rem;
+    width: 100%;
     height: 100%;
     border-radius: 6px;
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: bold;
     transition: background-color 0.3s ease-in;
+}
+
+
+.navbar-item--active {
+    background-color: #4545cc;
 }
 
 .navbar-item:hover {
     background-color: #4545cc;
 }
 
-.navbar-item a {
-    text-decoration: none;
-    color: aliceblue;
-    font-weight: bold;
 
-
-}
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     .navbar {
         flex-wrap: wrap;
     }

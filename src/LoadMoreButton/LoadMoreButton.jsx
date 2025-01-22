@@ -45,7 +45,7 @@ function LoadMoreButton() {
                 }
             </div>
             {
-                isProductsMaxLength && <p>There is not more products</p>
+                isProductsMaxLength && <p>You have reached to <b>{products.length}</b> products</p>
             }
             <button
                 className="LoadMoreButton"
