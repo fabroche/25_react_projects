@@ -23,9 +23,8 @@ function LoadMoreButton() {
 
     const {data: products, setData: setProducts, loading, error} = useFetchData(url);
 
-    useEffect(() => {
-        console.log(products)
-    }, [products]);
+    const isProductsMaxLength = products.length === 100;
+
 
     function handleLoadMoreData() {
         setSkipCount(skipCount + 1)
@@ -48,7 +47,7 @@ function LoadMoreButton() {
             <button
                 className="LoadMoreButton"
                 onClick={handleLoadMoreData}
-                disabled={products.length === 100}
+                disabled={isProductsMaxLength}
             >Load More Products
             </button>
         </>
