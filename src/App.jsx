@@ -15,22 +15,22 @@ function App() {
                 <nav>
                     <ul className="navbar">
                         <li className="navbar-item">
-                            <Link to="/25_react_projects">Home</Link>
+                            <Link to="/">Home</Link>
                         </li>
                         <li className="navbar-item">
-                            <Link to="/25_react_projects/acordion">Acordion</Link>
+                            <Link to="/acordion">Acordion</Link>
                         </li>
                         <li className="navbar-item">
-                            <Link to="/25_react_projects/random-color">RandomColor</Link>
+                            <Link to="/random-color">RandomColor</Link>
                         </li>
                         <li className="navbar-item">
-                            <Link to="/25_react_projects/star-rating">StarRating</Link>
+                            <Link to="/star-rating">StarRating</Link>
                         </li>
                         <li className="navbar-item">
-                            <Link to="/25_react_projects/image-slider">ImageSlider</Link>
+                            <Link to="/image-slider">ImageSlider</Link>
                         </li>
                         <li className="navbar-item">
-                            <Link to="/25_react_projects/loadmore-btn">LoadMoreButton</Link>
+                            <Link to="/loadmore-btn">LoadMoreButton</Link>
                         </li>
                     </ul>
                 </nav>
