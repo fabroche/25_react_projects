@@ -1,5 +1,16 @@
+const query = {
+    limit: 20,
+    skip: 20,
+    select: {
+        id: "id",
+        title: "title",
+        description: "description",
+        price: "price",
+        rating: "rating",
+    }
+}
 
-const url = 'https://dummyjson.com/products?limit=10&skip=10&select=title,price'
+const url = `https://dummyjson.com/products?limit=${query.limit}&skip=${query.skip}&select=${query.select.id},${query.select.title},${query.select.description},${query.select.price},${query.select.rating}`
 
 export async function fetchProducts() {
 

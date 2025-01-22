@@ -1,0 +1,31 @@
+.products-container {
+    display: flex;
+    flex: 1 1;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2.4rem;
+    width: 100%;
+}
+
+.LoadMoreButton {
+    all: unset;
+    padding: 0.8rem 1.6rem;
+    background-color: darkorange;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: aliceblue;
+    border-radius: 0.5rem;
+    margin-bottom: 2.4rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.LoadMoreButton:hover,
+.LoadMoreButton:focus-visible {
+    background-color: #a95e02;
+}
+
+.LoadMoreButton:disabled {
+    background-color: #efbf83;
+}
