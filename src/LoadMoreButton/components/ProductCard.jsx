@@ -28,20 +28,21 @@ function ProductCard({product}) {
                     alt={product.title}
                     onLoad={handleOnLoadImage}
                 />
-            </div>
-            <h3 className="ProductCard__title">{product.title}</h3>
-            <div className="ProductCard__info-container">
-                <em className="ProductCard__description">
-                    {product.description}
-                </em>
-            </div>
-            <span className="ProductCard__rating">
+                <span className="ProductCard__rating">
                     <b>{product.rating}</b>
                 <FaStar
                     className="ProductCard__star-icon"
                     size={20}
                 />
                 </span>
+            </div>
+            <h3 className="ProductCard__title">{product.title}</h3>
+
+            <div className="ProductCard__info-container">
+                <em className="ProductCard__description">
+                    {product.description}
+                </em>
+            </div>
         </div>
     );
 }
