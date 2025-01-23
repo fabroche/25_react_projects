@@ -30,8 +30,9 @@ function LoadMoreButton() {
         setSkipCount(skipCount + 1)
     }
 
-    if (loading) {
-        return <p>Loading...</p>
+
+    if (error) {
+        return <p>Error: {error.message}</p>
     }
 
     return (
@@ -50,8 +51,14 @@ function LoadMoreButton() {
             <button
                 className="LoadMoreButton"
                 onClick={handleLoadMoreData}
-                disabled={isProductsMaxLength}
-            >Load More Products
+                disabled={isProductsMaxLength || loading}
+            >
+                {loading
+                    ? <div className="spinner-container">
+                        Loading...
+                        <div className="spinner spinner-loadModeButton"></div>
+                    </div>
+                    : 'Load More Products'}
             </button>
 
         </>

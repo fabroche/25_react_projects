@@ -50,6 +50,27 @@
     background-color: #4545cc;
 }
 
+.spinner {
+    border: 0.4rem solid #f3f3f3; /* Color del borde */
+    border-top: 0.4rem solid #3498db; /* Color del borde superior */
+    border-radius: 50%; /* Redondea el borde para que sea circular */
+    width: 4rem; /* Ancho del spinner */
+    height: 4rem; /* Altura del spinner */
+    animation: spin 1.5s ease-in-out infinite; /* Aplicar animación */
+}
+
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 
 @media only screen and (max-width: 800px) {
     .navbar {

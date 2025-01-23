@@ -30,3 +30,7 @@
 .LoadMoreButton:disabled {
     background-color: #efbf83;
 }
+
+.spinner-loadModeButton {
+    border-top: 0.4rem solid var(--btn-primary); /* Color del borde superior */
+}
