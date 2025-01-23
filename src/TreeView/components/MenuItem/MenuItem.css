@@ -1,0 +1,26 @@
+.menu-item-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    border: 1px solid black;
+    padding: 0.8rem 1.6rem;
+    border-radius: 0.8rem;
+    background-color: aliceblue;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-item-container:hover,
+.menu-item-container:focus-visible {
+    background-color: var(--soft-orange);
+}
+
+.menu-item {
+    width: 100%;
+}
+
+.menu-item-expandBtn {
+    cursor: pointer;
+}

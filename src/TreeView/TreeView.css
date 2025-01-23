@@ -1,0 +1,15 @@
+.tree-view-container {
+    width: 100%;
+    height: fit-content;
+    min-height: 60rem;
+    max-height: 100vh;
+    max-width: 300px;
+    display: flex;
+    box-shadow: 0px 0px 7px black;
+    border-radius: 0.5rem;
+    background: var(--soft-blue);
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: black;
+    text-align: center;
+}

@@ -4,6 +4,7 @@
     align-items: center;
     flex-direction: column;
     gap: 32px;
+    padding: 2.4rem;
 }
 
 .navbar {
@@ -14,13 +15,15 @@
     border-radius: 4px;
     list-style: none;
     display: flex;
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     gap: 6px;
 }
 
 .navbar-item-container {
     width: 100%;
+    max-width: fit-content;
     height: 30px;
 }
 
@@ -51,5 +54,9 @@
 @media only screen and (max-width: 800px) {
     .navbar {
         flex-wrap: wrap;
+    }
+
+    .navbar-item-container {
+        max-width: 100%;
     }
 }

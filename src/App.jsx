@@ -1,12 +1,13 @@
 import './App.css'
-import {Link, NavLink, Route, Routes} from "react-router-dom";
+import {NavLink, Route, Routes} from "react-router-dom";
 import {Acordion} from "./Acordion/Acordion.jsx";
 import Home from "./Home/Home.jsx";
 import RandomColor from "./RandomHex/RandomColor.jsx";
 import StarRating from "./StarRating/StarRating.jsx";
 import ImageSlider from "./ImageSlider/ImageSlider.jsx";
 import LoadMoreButton from "./LoadMoreButton/LoadMoreButton.jsx";
-import {useState} from "react";
+import TreeView from "./TreeView/TreeView.jsx";
+import menus from "./TreeView/data/TreeViewData.js";
 
 const isActiveLinkStyles = {
     active: "navbar-item navbar-item--active",
@@ -67,6 +68,14 @@ function App() {
                                 }
                             >LoadMoreButton</NavLink>
                         </li>
+                        <li className="navbar-item-container">
+                            <NavLink
+                                to="/tree-view"
+                                className={
+                                    ({isActive}) => isActive ? isActiveLinkStyles.active : isActiveLinkStyles.inactive
+                                }
+                            >TreeView</NavLink>
+                        </li>
                     </ul>
                 </nav>
                 <Routes>
@@ -76,6 +85,7 @@ function App() {
                     <Route path="/star-rating" element={<StarRating/>}></Route>
                     <Route path="/image-slider" element={<ImageSlider/>}></Route>
                     <Route path="/loadmore-btn" element={<LoadMoreButton/>}></Route>
+                    <Route path="/tree-view" element={<TreeView menus={menus}/>}></Route>
                     <Route path="*" element={<Home/>}></Route>
                 </Routes>
             </div>
