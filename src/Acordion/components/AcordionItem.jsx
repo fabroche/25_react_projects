@@ -1,4 +1,5 @@
 import './AcordionItem.css';
+import {useEffect, useState} from "react";
 
 function AcordionItem({
                           data,
@@ -8,6 +9,10 @@ function AcordionItem({
                           multiSelectedAcordionItems,
                           setMultiSelectedAcordionItems
                       }) {
+
+    const [isShowedAnswer, setIsShowedAnswer] = useState(false);
+
+    const isActivateItem = (isEnableMultiSelection && isShowedAnswer || selected === data.id);
 
     function handleSingleSelection(getCurrentId) {
         setSelected(getCurrentId === selected ? null : getCurrentId);
@@ -19,15 +24,16 @@ function AcordionItem({
 
             const newSelectedAcordionItems = multiSelectedAcordionItems.filter(item => item !== getCurrentId);
             setMultiSelectedAcordionItems(newSelectedAcordionItems);
+            setIsShowedAnswer(false);
             return
         }
         setMultiSelectedAcordionItems([...multiSelectedAcordionItems, getCurrentId]);
+        setIsShowedAnswer(true);
     }
 
-    const answer = (<em className="answer">{data.answer}</em>)
 
     return (
-        <div className="item flex-center">
+        <div className={`item flex-center ${isActivateItem ? 'item--active' : ''}`}>
             <div
                 className="title flex-center"
                 onClick={() => isEnableMultiSelection
@@ -35,26 +41,9 @@ function AcordionItem({
                     : handleSingleSelection(data.id)}
             >
                 <h3>{data.question}</h3>
-                <button className="btn">{
-                    isEnableMultiSelection
-                        ? multiSelectedAcordionItems.includes(data.id)
-                            ? '-'
-                            : '+'
-                        : selected === data.id
-                            ? '-'
-                            : '+'
-                }</button>
+                <button className={`item-btn ${isActivateItem ? 'item-btn--active' : ''}`}>{'>'}</button>
             </div>
-            {
-                isEnableMultiSelection
-                    ? multiSelectedAcordionItems.includes(data.id)
-                        ? answer
-                        : null
-                    : selected === data.id
-                        ? answer
-                        : null
-            }
-
+            <em className={`answer ${ isActivateItem ? 'answer--active' : ''}`}>{data.answer}</em>
         </div>
     );
 }

@@ -14,6 +14,7 @@ function Acordion() {
 
     function toggleMultiSelectionMode(isEnableMultiSelection) {
         setIsEnableMultiSelection(!isEnableMultiSelection);
+        setSelected(null)
     }
 
     return (
