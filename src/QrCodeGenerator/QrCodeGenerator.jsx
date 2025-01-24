@@ -19,7 +19,7 @@ function QrCodeGenerator() {
 
     return (
         <>
-            <h1>Generate your own QR Code😎</h1>
+            <h1 className="qr-code-generator__title">Generate your own QR Code😎</h1>
             <form
                 onSubmit={handleOnSubmitQRValue}
                 className="qr-code-generator__form"
