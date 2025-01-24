@@ -8,6 +8,7 @@ import ImageSlider from "./ImageSlider/ImageSlider.jsx";
 import LoadMoreButton from "./LoadMoreButton/LoadMoreButton.jsx";
 import TreeView from "./TreeView/TreeView.jsx";
 import menus from "./TreeView/data/TreeViewData.js";
+import QrCodeGenerator from "./QrCodeGenerator/QrCodeGenerator.jsx";
 
 const isActiveLinkStyles = {
     active: "navbar-item navbar-item--active",
@@ -76,6 +77,14 @@ function App() {
                                 }
                             >TreeView</NavLink>
                         </li>
+                        <li className="navbar-item-container">
+                            <NavLink
+                                to="/qr-code-generator"
+                                className={
+                                    ({isActive}) => isActive ? isActiveLinkStyles.active : isActiveLinkStyles.inactive
+                                }
+                            >QrCodeGenerator</NavLink>
+                        </li>
                     </ul>
                 </nav>
                 <Routes>
@@ -86,6 +95,7 @@ function App() {
                     <Route path="/image-slider" element={<ImageSlider/>}></Route>
                     <Route path="/loadmore-btn" element={<LoadMoreButton/>}></Route>
                     <Route path="/tree-view" element={<TreeView menus={menus}/>}></Route>
+                    <Route path="/qr-code-generator" element={<QrCodeGenerator/>}></Route>
                     <Route path="*" element={<Home/>}></Route>
                 </Routes>
             </div>
