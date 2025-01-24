@@ -1,0 +1,50 @@
+.qr-code-generator__form {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    width: 100%;
+    height: 100%;
+}
+
+.qr-code-generator__input {
+    all: unset;
+    height: 100%;
+    padding: .8rem 1.6rem;
+    border-radius: 0.4rem;
+    border: 2px solid black;
+    transition: all .2s ease-in-out;
+}
+
+.qr-code-generator__input:focus {
+    box-shadow: 0 0.2rem 0.4rem black;
+}
+
+.qr-code-generator__input:invalid.qr-code-generator__input:focus {
+    border: 2px solid rgba(169, 8, 8, 0.68);
+}
+
+.qr-code-generator__form__submitButton {
+    all: unset;
+    text-align: center;
+    color: aliceblue;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 0.4rem;
+    background: linear-gradient(to bottom, var(--soft-orange), darkorange);
+    padding: 1rem 1.8rem;
+    transition: all .2s ease-in-out;
+}
+
+.qr-code-generator__form__submitButton:hover {
+    opacity: 0.8;
+}
+
+@media only screen and (max-width: 600px) {
+    .qr-code-generator__form__submitButton,
+    .qr-code-generator__input {
+        width: 100%;
+    }
+}
