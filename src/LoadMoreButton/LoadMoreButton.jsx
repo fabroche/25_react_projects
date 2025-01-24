@@ -1,6 +1,6 @@
 import './LoadMoreButton.css'
 import useFetchData from "./hooks/useFetchData.jsx";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import ProductCard from "./components/ProductCard.jsx";
 
 const query = {
@@ -21,7 +21,7 @@ function LoadMoreButton() {
 
     const url = `https://dummyjson.com/products?limit=${query.limit}&skip=${skipCount === 0 ? 0 : skipCount * 20}`
 
-    const {data: products, setData: setProducts, loading, error} = useFetchData(url);
+    const {data: products, loading, error} = useFetchData(url);
 
     const isProductsMaxLength = products.length === 100;
 
