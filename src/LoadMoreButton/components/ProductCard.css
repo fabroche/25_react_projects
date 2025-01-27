@@ -49,7 +49,7 @@
 }
 
 .ProductCard__info-container {
-    background-color: rgba(157, 157, 157, 0.12);
+    background-color: light-dark(var(--dark-bg), var(--light-bg));
     color: black;
     padding: 1.6rem;
     border-radius: 0.6rem;
