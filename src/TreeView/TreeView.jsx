@@ -1,6 +1,5 @@
 import './TreeView.css'
 import MenuList from "./components/MenuList/MenuList.jsx";
-import {useEffect} from "react";
 
 function TreeView({menus = []}) {
 

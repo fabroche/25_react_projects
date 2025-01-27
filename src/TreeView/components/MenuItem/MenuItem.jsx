@@ -1,6 +1,6 @@
 import './MenuItem.css'
 import MenuList from "../MenuList/MenuList.jsx";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 
 function MenuItem({item}) {
 
