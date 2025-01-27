@@ -9,7 +9,7 @@
     --acordion-item-answer: white;
     --soft-orange: #e7721c;
     --soft-blue: #272788;
-
+    --navBarItemActive: #4545cc;
     color-scheme: light dark;
     /*Light Mode Colors*/
     --light-bg: #fff;
@@ -34,6 +34,4 @@ html {
 
 body {
     font-size: 1.6rem;
-    background-color: light-dark(var(--light-bg), var(--dark-bg));
-    color: light-dark(var(--light-text));
 }
