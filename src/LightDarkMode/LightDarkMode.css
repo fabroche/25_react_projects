@@ -1,0 +1,44 @@
+.changeTheme {
+    position: relative;
+    width: 80px;
+    height: 40px;
+    display: block;
+    background: #cbcbcb;
+    border-radius: 20px;
+    margin-bottom: 2.4rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.changeTheme::before {
+    position: absolute;
+    text-align: center;
+    font-size: 2rem;
+    left: .5rem;
+    top: .5rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: #fff;
+    content: "";
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 .3rem #b5b4b4;
+}
+
+.changeTheme:has(input:checked) {
+    background-color: #4cb774;
+
+    &.changeTheme::before {
+        left: calc(100% - 3.5rem);
+    }
+}
+
+.changeTheme input {
+    display: none;
+}
+
+.text-container {
+    padding: .8rem 1.6rem;
+    border-radius: .8rem;
+    transition: all .3s ease-in-out;
+}
