@@ -10,11 +10,19 @@ const THEMES = {
 function LightDarkMode() {
     const [theme, setTheme] = useState(THEMES.light);
 
-    const {isDarkMode, setIsDarkMode} = useContext(AppThemeContex)
+    const {isDarkMode, setIsDarkMode, rootElementRef} = useContext(AppThemeContex)
 
     function handleOnChangeTheme(e) {
         setTheme(e.target.checked ? THEMES.dark : THEMES.light);
         setIsDarkMode(e.target.checked);
+
+        if (!isDarkMode) {
+            rootElementRef.current.classList.remove(THEMES.light);
+            rootElementRef.current.classList.add(THEMES.dark);
+        } else {
+            rootElementRef.current.classList.remove(THEMES.dark);
+            rootElementRef.current.classList.add(THEMES.light);
+        }
     }
 
 
