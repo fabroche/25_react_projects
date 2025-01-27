@@ -1,5 +1,5 @@
 import './LightDarkMode.css'
-import {useContext, useState} from "react";
+import {useContext} from "react";
 import {AppThemeContex} from "./context/AppThemeContex.jsx";
 
 const THEMES = {
@@ -8,12 +8,10 @@ const THEMES = {
 }
 
 function LightDarkMode() {
-    const [theme, setTheme] = useState(THEMES.light);
 
     const {isDarkMode, setIsDarkMode, rootElementRef} = useContext(AppThemeContex)
 
     function handleOnChangeTheme(e) {
-        setTheme(e.target.checked ? THEMES.dark : THEMES.light);
         setIsDarkMode(e.target.checked);
 
         if (!isDarkMode) {
