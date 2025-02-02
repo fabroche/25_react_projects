@@ -11,11 +11,11 @@ import LightDarkMode from "./LightDarkMode/LightDarkMode.jsx";
 
 function useUrls() {
     const routes = [
-            {
-                path: "/",
-                element: <Home/>,
-                name: "Home",
-            },
+            // {
+            //     path: "/",
+            //     element: <Home/>,
+            //     name: "Home",
+            // },
             {
                 path: "/acordion",
                 element: <Acordion/>,

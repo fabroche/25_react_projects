@@ -4,6 +4,7 @@ import Home from "./Home/Home.jsx";
 import useUrls from "./urls.jsx";
 import {AppThemeContex} from "./LightDarkMode/context/AppThemeContex.jsx";
 import {useContext} from "react";
+import {Acordion} from "./Acordion/Acordion.jsx";
 
 function App() {
     const {routes, ActiveLinkStyles} = useUrls();
@@ -34,7 +35,7 @@ function App() {
                                 <Route key={route.path} path={route.path} element={route.element}></Route>
                             ))
                         }
-                        <Route path="*" element={<Home/>}></Route>
+                        <Route path="*" element={<Acordion/>}></Route>
                     </Routes>
                 </div>
         </>
