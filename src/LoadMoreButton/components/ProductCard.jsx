@@ -1,7 +1,8 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useContext, useEffect, useRef, useState} from 'react';
 import './ProductCard.css'
 import {FaStar} from "react-icons/fa";
 import useLazyLoading from "../hooks/useLazyLoading.jsx";
+import {AppThemeContex} from "../../LightDarkMode/context/AppThemeContex.jsx";
 
 function ProductCard({product}) {
 
@@ -13,6 +14,7 @@ function ProductCard({product}) {
         currentImageUrl
     } = useLazyLoading({imageRef: imageRef, imageUrl: product.thumbnail});
 
+    const {isDarkMode} = useContext(AppThemeContex)
 
     function handleOnLoadImage() {
         setIsImageLoading(false);
@@ -38,7 +40,12 @@ function ProductCard({product}) {
             </div>
             <h3 className="ProductCard__title">{product.title}</h3>
 
-            <div className="ProductCard__info-container">
+            <div className={
+                `ProductCard__info-container ${isDarkMode 
+                    ? 'ProductCard__info-container--dark' 
+                    : 'ProductCard__info-container--light'
+                }`}
+            >
                 <em className="ProductCard__description">
                     {product.description}
                 </em>

@@ -49,11 +49,17 @@
 }
 
 .ProductCard__info-container {
-    background-color: light-dark(var(--dark-bg), var(--light-bg));
     color: black;
     padding: 1.6rem;
     border-radius: 0.6rem;
     height: 150px;
+}
+
+.ProductCard__info-container--dark {
+    background-color: var(--light-bg);
+}
+.ProductCard__info-container--light {
+    background-color: rgba(157, 157, 157, 0.12);
 }
 
 .ProductCard__description {
