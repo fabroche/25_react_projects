@@ -49,14 +49,32 @@
 }
 
 .ProductCard__info-container {
+    overflow-y: scroll;
     color: black;
     padding: 1.6rem;
     border-radius: 0.6rem;
     height: 150px;
 }
 
+.ProductCard__info-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.ProductCard__info-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.ProductCard__info-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+}
+
+.ProductCard__info-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 .ProductCard__info-container--dark {
-    background-color: var(--light-bg);
+    background-color: var(--white);
 }
 .ProductCard__info-container--light {
     background-color: rgba(157, 157, 157, 0.12);
