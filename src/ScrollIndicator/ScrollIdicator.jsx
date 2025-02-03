@@ -30,7 +30,14 @@ function ScrollIdicator() {
         return () => window.removeEventListener('scroll', handleScrollPercentage)
     }, []);
 
-    if (loading) return <p>Loading...</p>;
+    if (loading) return (
+        <>
+            <h1>Scroll Indicator</h1>
+            <div className="spinner-container">
+                <div className="spinner spinner-loadModeButton"></div>
+            </div>
+        </>
+    );
 
     if (error) return <p>Error: {error}</p>;
 

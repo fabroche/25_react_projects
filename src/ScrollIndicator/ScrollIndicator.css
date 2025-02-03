@@ -22,3 +22,7 @@
     right: 100%;
     transition: right 0.3s ease;
 }
+
+.spinner-ScrollIndicator {
+    border-top: 0.4rem solid var(--btn-primary);
+}
