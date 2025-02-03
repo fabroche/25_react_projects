@@ -5,7 +5,7 @@
 }
 
 .item {
-    color: var(--dark-text);
+    color: var(--dark);
     interpolate-size: allow-keywords;
     position: relative;
     flex-direction: column;
@@ -24,7 +24,7 @@
 }
 
 .item-btn {
-    color: var(--dark-text);
+    color: var(--dark);
     border: none;
     background-color: transparent;
     font-size: 1.8rem;
