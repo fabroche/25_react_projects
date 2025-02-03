@@ -8,6 +8,7 @@ import TreeView from "./TreeView/TreeView.jsx";
 import QrCodeGenerator from "./QrCodeGenerator/QrCodeGenerator.jsx";
 import menus from "./TreeView/data/TreeViewData.js";
 import LightDarkMode from "./LightDarkMode/LightDarkMode.jsx";
+import ScrollIdicator from "./ScrollIndicator/ScrollIdicator.jsx";
 
 function useUrls() {
     const routes = [
@@ -56,6 +57,11 @@ function useUrls() {
                 path: "/light-dark-mode",
                 element: <LightDarkMode/>,
                 name: "LightDarkMode",
+            },
+            {
+                path: "/scroll-indicator",
+                element: <ScrollIdicator/>,
+                name: "ScrollIndicator",
             }
         ]
     ;

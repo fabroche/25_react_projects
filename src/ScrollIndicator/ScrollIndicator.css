@@ -1,0 +1,24 @@
+.wrapper-container {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+}
+
+.scrollIndicator-container {
+    height: 20px;
+    position: relative;
+    width: 100%;
+    background-color: #272788;
+}
+
+.scrollIndicator {
+    background-color: #cbcbcb;
+    height: 20px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    transition: right 0.3s ease;
+}
