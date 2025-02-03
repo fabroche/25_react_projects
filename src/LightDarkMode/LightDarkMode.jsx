@@ -9,7 +9,7 @@ function LightDarkMode() {
     function handleOnChangeTheme(e) {
         setIsDarkMode(e.target.checked);
 
-        rootElementRef.current.setAttribute("data-isDarkMode", String(e.target.checked));
+        rootElementRef.current.setAttribute("data-isdarkmode", String(e.target.checked));
     }
 
 
@@ -27,7 +27,7 @@ function LightDarkMode() {
                 />
             </label>
 
-            <div className="text-container" data-isDarkMode={isDarkMode}>
+            <div className="text-container" data-isdarkmode={isDarkMode}>
                 <h3>Yo soy un texto</h3>
             </div>
         </div>

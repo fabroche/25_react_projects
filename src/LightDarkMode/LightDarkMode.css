@@ -52,12 +52,12 @@
     transition: all .3s ease-in-out;
 }
 
-.text-container[data-isDarkMode="true"] {
+.text-container[data-isdarkmode="true"] {
     background-color: var(--white);
     color: var(--dark);
 }
 
-.text-container[data-isDarkMode="false"] {
+.text-container[data-isdarkmode="false"] {
     background-color: var(--dark);
     color: var(--white);
 }

@@ -18,12 +18,12 @@
     /*Light Mode Colors*/
 }
 
-[data-isDarkMode="true"] {
+[data-isdarkmode="true"] {
     --bg-color: #333;
     --text-color: #fff;
 }
 
-[data-isDarkMode="false"] {
+[data-isdarkmode="false"] {
     --bg-color: #fff;
     --text-color: #333;
 }
