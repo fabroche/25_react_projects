@@ -12,6 +12,8 @@ function AppThemeProvider({children}) {
     useEffect(() => {
         // Asignar el elemento root a la referencia
         rootElementRef.current = document.getElementById('root');
+        rootElementRef.current.classList.add('light-dark-theme');
+        rootElementRef.current.setAttribute('data-isDarkMode', String(isDarkMode));
     }, []);
 
     return (

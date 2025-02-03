@@ -12,13 +12,20 @@
     --navBarItemActive: #4545cc;
     color-scheme: light dark;
     /*Light Mode Colors*/
-    --light-bg: #fff;
-    --light-text: #ccc;
+    --white: #fff;
+    --dark: #333;
+    --default-transition: all .3s ease-in-out;
     /*Light Mode Colors*/
-    --dark-bg: #333;
-    --dark-text: #333;
+}
 
-    --text-color: light-dark(#333, #ccc);
+[data-isDarkMode="true"] {
+    --bg-color: #333;
+    --text-color: #fff;
+}
+
+[data-isDarkMode="false"] {
+    --bg-color: #fff;
+    --text-color: #333;
 }
 
 * {
@@ -41,4 +48,5 @@ body {
 #root {
     height: 100%;
     min-height: 100vh;
+    transition: var(--default-transition);
 }
