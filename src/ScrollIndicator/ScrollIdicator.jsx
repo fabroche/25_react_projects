@@ -8,7 +8,6 @@ function ScrollIdicator({scrollPercentage}) {
 
     const {data: products, loading, error} = useProducts();
 
-    // const {scrollPercentage} = useContext(ScrollContext);
 
     if (loading) return (
         <>

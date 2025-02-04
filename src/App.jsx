@@ -9,11 +9,17 @@ function App() {
     const {routes, ActiveLinkStyles} = useUrls();
     const {scrollPercentage} = useContext(ScrollContext);
 
+    const scrollIndicatorComponentURL = routes.find(route => route.name === "ScrollIndicator").path;
+
+    const isScrollIndicator = location.hash.includes(scrollIndicatorComponentURL)
+
     return (
         <>
                 <div className={`App`}>
                     <nav className="flex-center-column">
-                        <ul className={`navbar ${scrollPercentage > 1  ? 'navbar--fixed' : ''}`}>
+                        <ul className={
+                            `navbar ${scrollPercentage > 1  ? 'navbar--fixed' : ''} ${isScrollIndicator ? 'navbar--fixed-withScrollIndicator' : ''}`
+                        }>
                             {
                                 routes.map(route => (
                                     <li key={route.name} className="navbar-item-container">

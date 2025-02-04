@@ -43,6 +43,10 @@
     backdrop-filter: blur(10px);
 }
 
+.navbar--fixed-withScrollIndicator {
+    top: 2.4rem;
+}
+
 .navbar-item-container {
     width: 100%;
     max-width: fit-content;
