@@ -4,14 +4,17 @@ import './index.css'
 import App from './App.jsx'
 import {HashRouter} from "react-router-dom";
 import {AppThemeProvider} from "./LightDarkMode/context/AppThemeContex.jsx";
+import {ScrollContextProvider} from "./ScrollIndicator/context/ScrollContext.jsx";
 
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
         <HashRouter>
-            <AppThemeProvider>
-                <App/>
-            </AppThemeProvider>
+            <ScrollContextProvider>
+                <AppThemeProvider>
+                    <App/>
+                </AppThemeProvider>
+            </ScrollContextProvider>
         </HashRouter>
     </StrictMode>,
 )

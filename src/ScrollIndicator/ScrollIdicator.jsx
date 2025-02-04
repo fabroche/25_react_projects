@@ -1,34 +1,14 @@
 import './ScrollIndicator.css'
 import useProducts from "./hooks/useProducts.jsx";
 import ProductCard from "../LoadMoreButton/components/ProductCard.jsx";
-import {useEffect, useState} from "react";
+import {useContext, useEffect, useState} from "react";
+import {ScrollContext} from "./context/ScrollContext.jsx";
 
 function ScrollIdicator() {
 
     const {data: products, loading, error} = useProducts();
 
-    const [scrollPercentage, setScrollPercentage] = useState(0)
-
-
-    function handleScrollPercentage() {
-
-        const {scrollTop, scrollHeight, clientHeight} = document.documentElement;
-        const height = scrollHeight - clientHeight;
-        const scrollPorcentage = (scrollTop / height) * 100;
-
-        setScrollPercentage(scrollPorcentage);
-
-        console.log('scrollTop=', scrollTop);
-        console.log('Height=', height);
-        console.log('Scroll Percentage=', scrollPorcentage);
-
-    }
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScrollPercentage)
-
-        return () => window.removeEventListener('scroll', handleScrollPercentage)
-    }, []);
+    const {scrollPercentage} = useContext(ScrollContext);
 
     if (loading) return (
         <>
