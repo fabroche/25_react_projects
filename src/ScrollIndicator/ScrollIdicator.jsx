@@ -49,7 +49,7 @@ function ScrollIdicator() {
             }}>
                 <div className="scrollIndicator-container">
                 <span className="scrollIndicator" style={{
-                    right: `-${scrollPercentage}%`,
+                    width: `${scrollPercentage}%`,
                 }}></span>
                 </div>
             </div>
