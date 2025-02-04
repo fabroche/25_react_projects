@@ -14,6 +14,11 @@ function ScrollContextProvider({children}) {
         const scrollPorcentage = (scrollTop / height) * 100;
 
         setScrollPercentage(scrollPorcentage);
+
+        console.log('scrollTop=', scrollTop);
+        console.log('Height=', height);
+        console.log('Scroll Percentage=', scrollPorcentage);
+
     }
 
     useEffect(() => {

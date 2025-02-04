@@ -1,4 +1,3 @@
-import Home from "./Home/Home.jsx";
 import {Acordion} from "./Acordion/Acordion.jsx";
 import RandomColor from "./RandomHex/RandomColor.jsx";
 import StarRating from "./StarRating/StarRating.jsx";
@@ -9,8 +8,12 @@ import QrCodeGenerator from "./QrCodeGenerator/QrCodeGenerator.jsx";
 import menus from "./TreeView/data/TreeViewData.js";
 import LightDarkMode from "./LightDarkMode/LightDarkMode.jsx";
 import ScrollIdicator from "./ScrollIndicator/ScrollIdicator.jsx";
+import {useContext} from "react";
+import {ScrollContext} from "./ScrollIndicator/context/ScrollContext.jsx";
 
 function useUrls() {
+    const {scrollPercentage} = useContext(ScrollContext);
+
     const routes = [
             // {
             //     path: "/",
@@ -60,7 +63,7 @@ function useUrls() {
             },
             {
                 path: "/scroll-indicator",
-                element: <ScrollIdicator/>,
+                element: <ScrollIdicator scrollPercentage={scrollPercentage}/>,
                 name: "ScrollIndicator",
             }
         ]

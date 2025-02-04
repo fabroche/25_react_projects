@@ -4,11 +4,11 @@ import ProductCard from "../LoadMoreButton/components/ProductCard.jsx";
 import {useContext, useEffect, useState} from "react";
 import {ScrollContext} from "./context/ScrollContext.jsx";
 
-function ScrollIdicator() {
+function ScrollIdicator({scrollPercentage}) {
 
     const {data: products, loading, error} = useProducts();
 
-    const {scrollPercentage} = useContext(ScrollContext);
+    // const {scrollPercentage} = useContext(ScrollContext);
 
     if (loading) return (
         <>
