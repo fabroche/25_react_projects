@@ -19,7 +19,7 @@ function Acordion() {
 
     return (
         <div className="wrapper">
-            <h2>Funny Accordion</h2>
+            <h1>Funny Accordion</h1>
             <button
                 className={`btn ${isEnableMultiSelection ? 'btn-off' : 'btn-on'}`}
                 onClick={() => toggleMultiSelectionMode(isEnableMultiSelection)}
