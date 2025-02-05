@@ -21,11 +21,13 @@
 [data-isdarkmode="true"] {
     --bg-color: #333;
     --text-color: #fff;
+    --hamburger-btn: var(--dark)
 }
 
 [data-isdarkmode="false"] {
     --bg-color: #fff;
     --text-color: #333;
+    --hamburger-btn: var(--dark)
 }
 
 * {
