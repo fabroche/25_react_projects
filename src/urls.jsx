@@ -1,15 +1,15 @@
-import {Acordion} from "./Acordion/Acordion.jsx";
-import RandomColor from "./RandomHex/RandomColor.jsx";
-import StarRating from "./StarRating/StarRating.jsx";
-import ImageSlider from "./ImageSlider/ImageSlider.jsx";
-import LoadMoreButton from "./LoadMoreButton/LoadMoreButton.jsx";
-import TreeView from "./TreeView/TreeView.jsx";
-import QrCodeGenerator from "./QrCodeGenerator/QrCodeGenerator.jsx";
-import menus from "./TreeView/data/TreeViewData.js";
-import LightDarkMode from "./LightDarkMode/LightDarkMode.jsx";
-import ScrollIdicator from "./ScrollIndicator/ScrollIdicator.jsx";
+import {Acordion} from "./pages/Acordion/Acordion.jsx";
+import RandomColor from "./pages/RandomHex/RandomColor.jsx";
+import StarRating from "./pages/StarRating/StarRating.jsx";
+import ImageSlider from "./pages/ImageSlider/ImageSlider.jsx";
+import LoadMoreButton from "./pages/LoadMoreButton/LoadMoreButton.jsx";
+import TreeView from "./pages/TreeView/TreeView.jsx";
+import QrCodeGenerator from "./pages/QrCodeGenerator/QrCodeGenerator.jsx";
+import menus from "./pages/TreeView/data/TreeViewData.js";
+import LightDarkMode from "./pages/LightDarkMode/LightDarkMode.jsx";
+import ScrollIdicator from "./pages/ScrollIndicator/ScrollIdicator.jsx";
 import {useContext} from "react";
-import {ScrollContext} from "./ScrollIndicator/context/ScrollContext.jsx";
+import {ScrollContext} from "./pages/ScrollIndicator/context/ScrollContext.jsx";
 
 function useUrls() {
     const {scrollPercentage} = useContext(ScrollContext);
