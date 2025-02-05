@@ -14,23 +14,26 @@ function LightDarkMode() {
 
 
     return (
-        <div className="lightDarkMode">
-            <label
-                className="changeTheme"
-            >
-                <input
-                    id="changeTheme-btn"
-                    type="checkbox"
-                    name="ChangeTheme"
-                    onChange={handleOnChangeTheme}
-                    checked={isDarkMode}
-                />
-            </label>
+        <>
+            <h1>Light/Dark Mode</h1>
+            <div className="lightDarkMode">
+                <label
+                    className="changeTheme"
+                >
+                    <input
+                        id="changeTheme-btn"
+                        type="checkbox"
+                        name="ChangeTheme"
+                        onChange={handleOnChangeTheme}
+                        checked={isDarkMode}
+                    />
+                </label>
 
-            <div className="text-container" data-isdarkmode={isDarkMode}>
-                <h3>Yo soy un texto</h3>
+                <div className="text-container" data-isdarkmode={isDarkMode}>
+                    <h3>Yo soy un texto</h3>
+                </div>
             </div>
-        </div>
+        </>
     );
 }
 
