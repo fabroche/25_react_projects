@@ -9,6 +9,7 @@ function TabsPresenter() {
 
     return (
         <>
+            <h1>Custom Tabs</h1>
             <Tabs tabsContent={tabs} onChange={handleChange}/>
         </>
     );
