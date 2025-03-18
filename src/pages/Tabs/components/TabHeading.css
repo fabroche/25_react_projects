@@ -1,0 +1,21 @@
+.TabHeading {
+    width: 100px;
+    height: 40px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 12px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(90deg, rgba(253,142,29,1) 0%, rgba(252,176,69,1) 100%);
+    transition: all 0.4s ease-in-out;
+    &.active {
+        background: var(--soft-blue);
+    }
+}
+
+.TabHeading:hover {
+    background: var(--soft-blue);
+}

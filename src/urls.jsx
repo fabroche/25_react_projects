@@ -10,7 +10,7 @@ import LightDarkMode from "./pages/LightDarkMode/LightDarkMode.jsx";
 import ScrollIdicator from "./pages/ScrollIndicator/ScrollIdicator.jsx";
 import {useContext} from "react";
 import {ScrollContext} from "./pages/ScrollIndicator/context/ScrollContext.jsx";
-import {Tabs} from "./pages/Tabs/Tabs.jsx";
+import {TabsPresenter} from "./pages/Tabs/TabsPresenter.jsx";
 
 function useUrls() {
     const {scrollPercentage} = useContext(ScrollContext);
@@ -69,7 +69,7 @@ function useUrls() {
             },
             {
                 path: "/tabs",
-                element: <Tabs/>,
+                element: <TabsPresenter/>,
                 name: "Tabs",
             },
         ]
