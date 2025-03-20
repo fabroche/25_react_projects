@@ -11,6 +11,7 @@ import ScrollIdicator from "./pages/ScrollIndicator/ScrollIdicator.jsx";
 import {useContext} from "react";
 import {ScrollContext} from "./pages/ScrollIndicator/context/ScrollContext.jsx";
 import {TabsPresenter} from "./pages/Tabs/TabsPresenter.jsx";
+import ModalPopup from "./pages/ModalPopup/ModalPopup.jsx";
 
 function useUrls() {
     const {scrollPercentage} = useContext(ScrollContext);
@@ -72,6 +73,11 @@ function useUrls() {
                 element: <TabsPresenter/>,
                 name: "Tabs",
             },
+            {
+                path: "/modal-popup",
+                element: <ModalPopup/>,
+                name: "Modal Popup",
+            }
         ]
     ;
 
