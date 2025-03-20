@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {tabs} from './data/tabs.js';
 import Tabs from "./components/Tabs.jsx";
 
