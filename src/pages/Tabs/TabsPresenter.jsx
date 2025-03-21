@@ -4,7 +4,7 @@ import Tabs from "./components/Tabs.jsx";
 
 function TabsPresenter() {
     function handleChange(currentTabIndex) {
-        console.log(currentTabIndex);
+
     }
 
     return (
