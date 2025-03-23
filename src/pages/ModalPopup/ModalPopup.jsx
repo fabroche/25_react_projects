@@ -13,7 +13,7 @@ function ModalPopup() {
         setIsAnimating(true);
     }
 
-    function onCloseModal(e) {
+    function onCloseModal() {
 
         setIsAnimating(false);
 
